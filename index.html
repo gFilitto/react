@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tutorial React</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+
+<main id="app"></main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.0/react.js"></script> <!-- Crear Componentes -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.0/react-dom.js"></script> <!--Usar los Componentes en la app web -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.2/babel.js"></script>
+<!-- Investigar las librerias mas recientes de react -->
+<script type="text/babel">
+	function Hola(props) {
+		const name = props.name;
+		
+		return (
+			<h1 id="Title">
+				Hola {name}
+			</h1>);
+	}
+
+	const hola = React.createElement(Hola,{
+		name:'Welcome',
+	});
+
+	ReactDOM.render(
+		<Hola name="Welcome" />,
+		document.getElementById('app')
+	);
+
+	setTimeout(
+		() => {
+			ReactDOM.render(
+				<Hola name="Gerar!" />,
+				document.getElementById('app')
+			);
+		},
+		1000
+	);
+</script>
+
+</body>
+</html>
