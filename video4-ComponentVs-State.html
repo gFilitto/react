@@ -34,14 +34,6 @@
 			this.handleClick = this.handleClick.bind(this);
 		}
 
-		componentWillMount(){
-			console.log('el componente se va a ejecutar');
-		}
-
-		componentDidMount(){
-			document.addEventListener('click',this.handleClick);			
-		}
-
 		handleClick(){
 			this.setState({
 				count:this.state.count + 1,
