@@ -17,11 +17,11 @@
 	function Hola(props){
 		return (
 			<h1 id="Title" onClick={props.onClick}>
-				Hola {props.name} {props.count}
+				Hola {props.name} - {props.count}
 			</h1>);
 	}
 
-	class MiComponente extends React.PureComponent {
+	class MiComponente extends React.Component {
 									//PureComponent: implementa un metodo para validar si los props o los estados
 									//Cambiaron y solamente hacer el render si cambiaron 
 		constructor(props){
